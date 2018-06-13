@@ -7,28 +7,6 @@ public class Fibonacci {
 
     // Goal: Compute the nth Fibonacci number F(n).
 
-    public static void main(String[] args) {
-        Fibonacci fibonacci = new Fibonacci();
-        long start = System.currentTimeMillis();
-        int n = fibonacci.fibNaive(25);
-        long end = System.currentTimeMillis();
-        System.out.println(n);
-        System.out.println(end - start);
-
-        start = System.currentTimeMillis();
-        n = fibonacci.fibMemo(25);
-        end = System.currentTimeMillis();
-        System.out.println(n);
-        System.out.println(end - start);
-
-        start = System.currentTimeMillis();
-        n = fibonacci.fibBottomUp(25);
-        end = System.currentTimeMillis();
-        System.out.println(n);
-        System.out.println(end - start);
-
-    }
-
     /**
      * Naive recursive algorithm
      * <p>
@@ -61,7 +39,7 @@ public class Fibonacci {
 
     /**
      * Bottom-up DP version
-     *
+     * <p>
      * Time - O(n)
      */
     public int fibBottomUp(int n) {
@@ -73,6 +51,27 @@ public class Fibonacci {
             fib[i] = f;
         }
         return fib[n];
+    }
+
+    public static void main(String[] args) {
+        Fibonacci fibonacci = new Fibonacci();
+        long start = System.currentTimeMillis();
+        int n = fibonacci.fibNaive(25);
+        long end = System.currentTimeMillis();
+        System.out.println(n);
+        System.out.println(end - start);
+
+        start = System.currentTimeMillis();
+        n = fibonacci.fibMemo(25);
+        end = System.currentTimeMillis();
+        System.out.println(n);
+        System.out.println(end - start);
+
+        start = System.currentTimeMillis();
+        n = fibonacci.fibBottomUp(25);
+        end = System.currentTimeMillis();
+        System.out.println(n);
+        System.out.println(end - start);
     }
 
 }
