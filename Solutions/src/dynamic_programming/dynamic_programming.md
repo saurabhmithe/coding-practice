@@ -13,3 +13,6 @@ The above explanation is for the memoized approach to Dynamic Programming.
 Another approach is "bottom-up" Dynamic Programming. This means starting at the bottom and working your way up.
 The bottom-up approach performs the exact same computation as the memoized recursive approach.
 The only difference is that we perform a topological sort of the sub-problem dependency DAG.
+
+A problem must have two key attributes to be able to be solved by Dynamic Programming. The two attributes are
+optimal Substructure and Overlapping Sub-problems.
